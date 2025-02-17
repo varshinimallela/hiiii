@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Proposal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('images/images/WhatsApp Image 2025-02-17 at 10.24.58_c3c98f9e.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .proposal-box {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            animation: scaleUp 0.5s ease-in-out;
+        }
+        .proposal-box h1 {
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .proposal-box button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .proposal-box button.yes {
+            background: #28a745;
+            color: white;
+        }
+        .proposal-box button.no {
+            background: #dc3545;
+            color: white;
+        }
+        .proposal-box button:hover {
+            opacity: 0.8;
+        }
+        .hidden {
+            display: none;
+        }
+        .sad-message {
+            color: #dc3545;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleUp {
+            from { transform: scale(0.8); }
+            to { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="proposal-box" id="proposalBox">
+        <h1>Will you marry me?</h1>
+        <button class="yes" onclick="handleYes()">Yes</button>
+        <button class="no" onclick="handleNo()">No</button>
+    </div>
+    <div class="proposal-box hidden" id="yesBox">
+        <h1>Hehe Love you so muchhh! 💍❤️</h1>
+        <video width="320" height="240" autoplay loop muted>
+            <source src="images/images/WhatsApp Video 2025-02-17 at 10.34.12_1ba82f42.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="proposal-box hidden" id="noBox">
+        <h1 class="sad-message">No ahh enduku ... 💔 
+            yes nokku pandi</h1>
+        <video width="320" height="240" autoplay loop muted>
+            <source src="images/images/WhatsApp Video 2025-02-17 at 10.43.23_36966e36.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <script>
+        function handleYes() {
+            document.getElementById('proposalBox').classList.add('hidden');
+            document.getElementById('yesBox').classList.remove('hidden');
+        }
+
+        function handleNo() {
+            document.getElementById('proposalBox').classList.add('hidden');
+            document.getElementById('noBox').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
